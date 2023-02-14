@@ -11,7 +11,7 @@ def infixToPostfix(expression):
 
     for character in expression:
 
-        if character not in Operators:  # if an operand append in postfix expression
+        if character not in Operators and character.isdigit():  # if an operand append in postfix expression
 
             output += character
 
@@ -39,7 +39,7 @@ def infixToPostfix(expression):
     return output
 
 
-expression = input('Enter infix expression ')
+expression = input('Enter infix expression: ')
 
 print('infix notation: ', expression)
 
