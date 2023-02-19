@@ -1,3 +1,5 @@
+import os
+
 Operators = set(['+', '-', '*', '/', '(', ')', '^'])  # collection of Operators
 
 Priority = {'+': 1, '-': 1, '*': 2, '/': 2, '^': 3}  # dictionary having priorities of Operators
@@ -27,7 +29,7 @@ def infixToPostfix(expression):
             stack.pop()
 
         else:
-
+            
             while stack and stack[-1] != '(' and Priority[character] <= Priority[stack[-1]]:
                 output += stack.pop()
 
@@ -39,8 +41,25 @@ def infixToPostfix(expression):
     return output
 
 
-expression = input('Enter infix expression: ')
+if __name__ == '__main__':
+    
+    print("DIGITE UMA OPÇÃO \n1 - Iserir uma Expressão \n2 - Ler Expressões já existentes no arquivo 'input.txt'\n")
+    op = int(input())
+    if(op == 1):
+        expression = input('Entre com a expressão Infixada: ')
+        print('Notação Infixada: ', expression)
+        print('Notação Pós-Fixada: ', infixToPostfix(expression))
 
-print('infix notation: ', expression)
+    elif(op==2):
+        file_input_expression = open("input.txt", "r")
+        list_file_input = file_input_expression.readlines()
 
-print('postfix notation: ', infixToPostfix(expression))
+        for line in list_file_input:
+            print('Notação Infixada: {}Notação Pós-Fixada: {}\n'.format(line, infixToPostfix(line.strip())))
+        file_input_expression.close()
+    else:
+        print('Opção Inválida!')
+        exit()
+
+
+
