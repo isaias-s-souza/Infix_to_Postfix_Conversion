@@ -55,7 +55,8 @@ if __name__ == '__main__':
         list_file_input = file_input_expression.readlines()
 
         for line in list_file_input:
-            print('Notação Infixada: {}Notação Pós-Fixada: {}\n'.format(line, infixToPostfix(line.strip())))
+            print('Notação Infixada: {}Notação Pós-Fixada: {}'.format(line, infixToPostfix(line.strip())))
+            print('\n')
         file_input_expression.close()
     else:
         print('Opção Inválida!')
