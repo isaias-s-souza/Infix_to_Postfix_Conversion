@@ -2,15 +2,15 @@
 
 ## Defifinição de Expressões Infixadas e Pós-Fixadas
 
-*Infixada*
+### Infixada
     Diz respeito aos operadores " +,-,*,/ " inseridos entre as expressões.
     Ex.: A + B * C, onde as variáveis A, B e C estão sendo manipuladas pelos operadores(DE ACORDO COM SUAS PRIORIDADES)
 
-*Pre-Fixada*
+### Pre-Fixada
     Diz respeito aos operadores " +,-,*,/ " inseridos antes das expressões.
     Ex.: +A*BC, onde as variáveis A, B e C estão sendo manipuladas pelos operadores(DE ACORDO COM SUAS PRIORIDADES)
 
-*Pós-Fixada*
+### Pós-Fixada
     Diz respeito aos operadores " +,-,*,/ " inseridos depois das expressões.
     Ex.: ABC*+ , onde as variáveis A, B e C estão sendo manipuladas pelos operadores(DE ACORDO COM SUAS PRIORIDADES)
 
