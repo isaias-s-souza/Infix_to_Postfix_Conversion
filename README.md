@@ -14,8 +14,8 @@
     Diz respeito aos operadores " +,-,*,/ " inseridos depois das expressões.
     Ex.: ABC*+ , onde as variáveis A, B e C estão sendo manipuladas pelos operadores(DE ACORDO COM SUAS PRIORIDADES)
 
-### Para executar basta rodar o arquivo(com o python instalado) 'main.py' em seu terminal
-    python main.py
+### Para executar basta rodar o arquivo(com o python instalado) `main.py` em seu terminal
+    `python main.py`
     
 ### Logo, você deverá escolher uma das opções abaixo:
     DIGITE UMA OPÇÃO 
