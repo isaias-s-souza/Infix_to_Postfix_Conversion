@@ -1,6 +1,6 @@
 # Infix_to_Postfix_Conversion
 
-*Defifinição de Expressões Infixadas e Pós-Fixadas*
+## Defifinição de Expressões Infixadas e Pós-Fixadas
 
 *Infixada*
     Diz respeito aos operadores " +,-,*,/ " inseridos entre as expressões.
