@@ -52,5 +52,6 @@
         Notação Infixada: 1+2*(3+4)-5/6*7+8
         Notação Pós-Fixada: 1234+*+56/7*-8+
 
+### Com isso, além de imprimir na tela, será também gerado um arquivo `output.json` que faz um detalhamento das operações com cada expressão de entrada. 
     
 Referências : https://panda.ime.usp.br/panda/static/pythonds_pt/02-EDBasicos/InfixPrefixandPostfixExpressions.html
