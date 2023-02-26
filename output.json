@@ -1,0 +1,488 @@
+{
+    "1+2-3": {
+        "steps": [
+            {
+                "Passo 1": {
+                    "current_token": "1",
+                    "operation_stack": "",
+                    "stack_represetation": "",
+                    "postfix_expression": "1"
+                },
+                "Passo 2": {
+                    "current_token": "+",
+                    "operation_stack": "Empilhou o caracter '+'. ",
+                    "stack_represetation": "+",
+                    "postfix_expression": "1"
+                },
+                "Passo 3": {
+                    "current_token": "2",
+                    "operation_stack": "",
+                    "stack_represetation": "+",
+                    "postfix_expression": "12"
+                },
+                "Passo 4": {
+                    "current_token": "-",
+                    "operation_stack": "Desempilhou até acabar a pilha ou até encontrar no topo um operador com prioridade menor. Empilhou o caracter '-'. ",
+                    "stack_represetation": "-",
+                    "postfix_expression": "12+"
+                },
+                "Passo 5": {
+                    "current_token": "3",
+                    "operation_stack": "",
+                    "stack_represetation": "-",
+                    "postfix_expression": "12+3"
+                },
+                "Passo 6": {
+                    "current_token": "Fim",
+                    "operation_stack": "Desempilhou até a pilha ficar vazia. ",
+                    "stack_represetation": "",
+                    "postfix_expression": "12+3-"
+                }
+            }
+        ],
+        "postfix_expression_final": "12+3-"
+    },
+    "(1+2)*3": {
+        "steps": [
+            {
+                "Passo 1": {
+                    "current_token": "(",
+                    "operation_stack": "Empilhou abertura '('. ",
+                    "stack_represetation": "(",
+                    "postfix_expression": ""
+                },
+                "Passo 2": {
+                    "current_token": "1",
+                    "operation_stack": "",
+                    "stack_represetation": "(",
+                    "postfix_expression": "1"
+                },
+                "Passo 3": {
+                    "current_token": "+",
+                    "operation_stack": "Empilhou o caracter '+'. ",
+                    "stack_represetation": "(+",
+                    "postfix_expression": "1"
+                },
+                "Passo 4": {
+                    "current_token": "2",
+                    "operation_stack": "",
+                    "stack_represetation": "(+",
+                    "postfix_expression": "12"
+                },
+                "Passo 5": {
+                    "current_token": ")",
+                    "operation_stack": "Desempilhou até antes da abertura '('. ",
+                    "stack_represetation": "",
+                    "postfix_expression": "12+"
+                },
+                "Passo 6": {
+                    "current_token": "*",
+                    "operation_stack": "Empilhou o caracter '*'. ",
+                    "stack_represetation": "*",
+                    "postfix_expression": "12+"
+                },
+                "Passo 7": {
+                    "current_token": "3",
+                    "operation_stack": "",
+                    "stack_represetation": "*",
+                    "postfix_expression": "12+3"
+                },
+                "Passo 8": {
+                    "current_token": "Fim",
+                    "operation_stack": "Desempilhou até a pilha ficar vazia. ",
+                    "stack_represetation": "",
+                    "postfix_expression": "12+3*"
+                }
+            }
+        ],
+        "postfix_expression_final": "12+3*"
+    },
+    "(1+2)*(3-4)": {
+        "steps": [
+            {
+                "Passo 1": {
+                    "current_token": "(",
+                    "operation_stack": "Empilhou abertura '('. ",
+                    "stack_represetation": "(",
+                    "postfix_expression": ""
+                },
+                "Passo 2": {
+                    "current_token": "1",
+                    "operation_stack": "",
+                    "stack_represetation": "(",
+                    "postfix_expression": "1"
+                },
+                "Passo 3": {
+                    "current_token": "+",
+                    "operation_stack": "Empilhou o caracter '+'. ",
+                    "stack_represetation": "(+",
+                    "postfix_expression": "1"
+                },
+                "Passo 4": {
+                    "current_token": "2",
+                    "operation_stack": "",
+                    "stack_represetation": "(+",
+                    "postfix_expression": "12"
+                },
+                "Passo 5": {
+                    "current_token": ")",
+                    "operation_stack": "Desempilhou até antes da abertura '('. ",
+                    "stack_represetation": "",
+                    "postfix_expression": "12+"
+                },
+                "Passo 6": {
+                    "current_token": "*",
+                    "operation_stack": "Empilhou o caracter '*'. ",
+                    "stack_represetation": "*",
+                    "postfix_expression": "12+"
+                },
+                "Passo 7": {
+                    "current_token": "(",
+                    "operation_stack": "Empilhou abertura '('. ",
+                    "stack_represetation": "*(",
+                    "postfix_expression": "12+"
+                },
+                "Passo 8": {
+                    "current_token": "3",
+                    "operation_stack": "",
+                    "stack_represetation": "*(",
+                    "postfix_expression": "12+3"
+                },
+                "Passo 9": {
+                    "current_token": "-",
+                    "operation_stack": "Empilhou o caracter '-'. ",
+                    "stack_represetation": "*(-",
+                    "postfix_expression": "12+3"
+                },
+                "Passo 10": {
+                    "current_token": "4",
+                    "operation_stack": "",
+                    "stack_represetation": "*(-",
+                    "postfix_expression": "12+34"
+                },
+                "Passo 11": {
+                    "current_token": ")",
+                    "operation_stack": "Desempilhou até antes da abertura '('. ",
+                    "stack_represetation": "*",
+                    "postfix_expression": "12+34-"
+                },
+                "Passo 12": {
+                    "current_token": "Fim",
+                    "operation_stack": "Desempilhou até a pilha ficar vazia. ",
+                    "stack_represetation": "",
+                    "postfix_expression": "12+34-*"
+                }
+            }
+        ],
+        "postfix_expression_final": "12+34-*"
+    },
+    "1+((2+3)*(5-6)-7)/(8-9)": {
+        "steps": [
+            {
+                "Passo 1": {
+                    "current_token": "1",
+                    "operation_stack": "",
+                    "stack_represetation": "",
+                    "postfix_expression": "1"
+                },
+                "Passo 2": {
+                    "current_token": "+",
+                    "operation_stack": "Empilhou o caracter '+'. ",
+                    "stack_represetation": "+",
+                    "postfix_expression": "1"
+                },
+                "Passo 3": {
+                    "current_token": "(",
+                    "operation_stack": "Empilhou abertura '('. ",
+                    "stack_represetation": "+(",
+                    "postfix_expression": "1"
+                },
+                "Passo 4": {
+                    "current_token": "(",
+                    "operation_stack": "Empilhou abertura '('. ",
+                    "stack_represetation": "+((",
+                    "postfix_expression": "1"
+                },
+                "Passo 5": {
+                    "current_token": "2",
+                    "operation_stack": "",
+                    "stack_represetation": "+((",
+                    "postfix_expression": "12"
+                },
+                "Passo 6": {
+                    "current_token": "+",
+                    "operation_stack": "Empilhou o caracter '+'. ",
+                    "stack_represetation": "+((+",
+                    "postfix_expression": "12"
+                },
+                "Passo 7": {
+                    "current_token": "3",
+                    "operation_stack": "",
+                    "stack_represetation": "+((+",
+                    "postfix_expression": "123"
+                },
+                "Passo 8": {
+                    "current_token": ")",
+                    "operation_stack": "Desempilhou até antes da abertura '('. ",
+                    "stack_represetation": "+(",
+                    "postfix_expression": "123+"
+                },
+                "Passo 9": {
+                    "current_token": "*",
+                    "operation_stack": "Empilhou o caracter '*'. ",
+                    "stack_represetation": "+(*",
+                    "postfix_expression": "123+"
+                },
+                "Passo 10": {
+                    "current_token": "(",
+                    "operation_stack": "Empilhou abertura '('. ",
+                    "stack_represetation": "+(*(",
+                    "postfix_expression": "123+"
+                },
+                "Passo 11": {
+                    "current_token": "5",
+                    "operation_stack": "",
+                    "stack_represetation": "+(*(",
+                    "postfix_expression": "123+5"
+                },
+                "Passo 12": {
+                    "current_token": "-",
+                    "operation_stack": "Empilhou o caracter '-'. ",
+                    "stack_represetation": "+(*(-",
+                    "postfix_expression": "123+5"
+                },
+                "Passo 13": {
+                    "current_token": "6",
+                    "operation_stack": "",
+                    "stack_represetation": "+(*(-",
+                    "postfix_expression": "123+56"
+                },
+                "Passo 14": {
+                    "current_token": ")",
+                    "operation_stack": "Desempilhou até antes da abertura '('. ",
+                    "stack_represetation": "+(*",
+                    "postfix_expression": "123+56-"
+                },
+                "Passo 15": {
+                    "current_token": "-",
+                    "operation_stack": "Desempilhou até acabar a pilha ou até encontrar no topo um operador com prioridade menor. Empilhou o caracter '-'. ",
+                    "stack_represetation": "+(-",
+                    "postfix_expression": "123+56-*"
+                },
+                "Passo 16": {
+                    "current_token": "7",
+                    "operation_stack": "",
+                    "stack_represetation": "+(-",
+                    "postfix_expression": "123+56-*7"
+                },
+                "Passo 17": {
+                    "current_token": ")",
+                    "operation_stack": "Desempilhou até antes da abertura '('. ",
+                    "stack_represetation": "+",
+                    "postfix_expression": "123+56-*7-"
+                },
+                "Passo 18": {
+                    "current_token": "/",
+                    "operation_stack": "Empilhou o caracter '/'. ",
+                    "stack_represetation": "+/",
+                    "postfix_expression": "123+56-*7-"
+                },
+                "Passo 19": {
+                    "current_token": "(",
+                    "operation_stack": "Empilhou abertura '('. ",
+                    "stack_represetation": "+/(",
+                    "postfix_expression": "123+56-*7-"
+                },
+                "Passo 20": {
+                    "current_token": "8",
+                    "operation_stack": "",
+                    "stack_represetation": "+/(",
+                    "postfix_expression": "123+56-*7-8"
+                },
+                "Passo 21": {
+                    "current_token": "-",
+                    "operation_stack": "Empilhou o caracter '-'. ",
+                    "stack_represetation": "+/(-",
+                    "postfix_expression": "123+56-*7-8"
+                },
+                "Passo 22": {
+                    "current_token": "9",
+                    "operation_stack": "",
+                    "stack_represetation": "+/(-",
+                    "postfix_expression": "123+56-*7-89"
+                },
+                "Passo 23": {
+                    "current_token": ")",
+                    "operation_stack": "Desempilhou até antes da abertura '('. ",
+                    "stack_represetation": "+/",
+                    "postfix_expression": "123+56-*7-89-"
+                },
+                "Passo 24": {
+                    "current_token": "Fim",
+                    "operation_stack": "Desempilhou até a pilha ficar vazia. ",
+                    "stack_represetation": "",
+                    "postfix_expression": "123+56-*7-89-/+"
+                }
+            }
+        ],
+        "postfix_expression_final": "123+56-*7-89-/+"
+    },
+    "1+2*(3+4)-5/6*7+8": {
+        "steps": [
+            {
+                "Passo 1": {
+                    "current_token": "1",
+                    "operation_stack": "",
+                    "stack_represetation": "",
+                    "postfix_expression": "1"
+                },
+                "Passo 2": {
+                    "current_token": "+",
+                    "operation_stack": "Empilhou o caracter '+'. ",
+                    "stack_represetation": "+",
+                    "postfix_expression": "1"
+                },
+                "Passo 3": {
+                    "current_token": "2",
+                    "operation_stack": "",
+                    "stack_represetation": "+",
+                    "postfix_expression": "12"
+                },
+                "Passo 4": {
+                    "current_token": "*",
+                    "operation_stack": "Empilhou o caracter '*'. ",
+                    "stack_represetation": "+*",
+                    "postfix_expression": "12"
+                },
+                "Passo 5": {
+                    "current_token": "(",
+                    "operation_stack": "Empilhou abertura '('. ",
+                    "stack_represetation": "+*(",
+                    "postfix_expression": "12"
+                },
+                "Passo 6": {
+                    "current_token": "3",
+                    "operation_stack": "",
+                    "stack_represetation": "+*(",
+                    "postfix_expression": "123"
+                },
+                "Passo 7": {
+                    "current_token": "+",
+                    "operation_stack": "Empilhou o caracter '+'. ",
+                    "stack_represetation": "+*(+",
+                    "postfix_expression": "123"
+                },
+                "Passo 8": {
+                    "current_token": "4",
+                    "operation_stack": "",
+                    "stack_represetation": "+*(+",
+                    "postfix_expression": "1234"
+                },
+                "Passo 9": {
+                    "current_token": ")",
+                    "operation_stack": "Desempilhou até antes da abertura '('. ",
+                    "stack_represetation": "+*",
+                    "postfix_expression": "1234+"
+                },
+                "Passo 10": {
+                    "current_token": "-",
+                    "operation_stack": "Desempilhou até acabar a pilha ou até encontrar no topo um operador com prioridade menor. Empilhou o caracter '-'. ",
+                    "stack_represetation": "-",
+                    "postfix_expression": "1234+*+"
+                },
+                "Passo 11": {
+                    "current_token": "5",
+                    "operation_stack": "",
+                    "stack_represetation": "-",
+                    "postfix_expression": "1234+*+5"
+                },
+                "Passo 12": {
+                    "current_token": "/",
+                    "operation_stack": "Empilhou o caracter '/'. ",
+                    "stack_represetation": "-/",
+                    "postfix_expression": "1234+*+5"
+                },
+                "Passo 13": {
+                    "current_token": "6",
+                    "operation_stack": "",
+                    "stack_represetation": "-/",
+                    "postfix_expression": "1234+*+56"
+                },
+                "Passo 14": {
+                    "current_token": "*",
+                    "operation_stack": "Desempilhou até acabar a pilha ou até encontrar no topo um operador com prioridade menor. Empilhou o caracter '*'. ",
+                    "stack_represetation": "-*",
+                    "postfix_expression": "1234+*+56/"
+                },
+                "Passo 15": {
+                    "current_token": "7",
+                    "operation_stack": "",
+                    "stack_represetation": "-*",
+                    "postfix_expression": "1234+*+56/7"
+                },
+                "Passo 16": {
+                    "current_token": "+",
+                    "operation_stack": "Desempilhou até acabar a pilha ou até encontrar no topo um operador com prioridade menor. Empilhou o caracter '+'. ",
+                    "stack_represetation": "+",
+                    "postfix_expression": "1234+*+56/7*-"
+                },
+                "Passo 17": {
+                    "current_token": "8",
+                    "operation_stack": "",
+                    "stack_represetation": "+",
+                    "postfix_expression": "1234+*+56/7*-8"
+                },
+                "Passo 18": {
+                    "current_token": "Fim",
+                    "operation_stack": "Desempilhou até a pilha ficar vazia. ",
+                    "stack_represetation": "",
+                    "postfix_expression": "1234+*+56/7*-8+"
+                }
+            }
+        ],
+        "postfix_expression_final": "1234+*+56/7*-8+"
+    },
+    "1+2*3": {
+        "steps": [
+            {
+                "Passo 1": {
+                    "current_token": "1",
+                    "operation_stack": "",
+                    "stack_represetation": "",
+                    "postfix_expression": "1"
+                },
+                "Passo 2": {
+                    "current_token": "+",
+                    "operation_stack": "Empilhou o caracter '+'. ",
+                    "stack_represetation": "+",
+                    "postfix_expression": "1"
+                },
+                "Passo 3": {
+                    "current_token": "2",
+                    "operation_stack": "",
+                    "stack_represetation": "+",
+                    "postfix_expression": "12"
+                },
+                "Passo 4": {
+                    "current_token": "*",
+                    "operation_stack": "Empilhou o caracter '*'. ",
+                    "stack_represetation": "+*",
+                    "postfix_expression": "12"
+                },
+                "Passo 5": {
+                    "current_token": "3",
+                    "operation_stack": "",
+                    "stack_represetation": "+*",
+                    "postfix_expression": "123"
+                },
+                "Passo 6": {
+                    "current_token": "Fim",
+                    "operation_stack": "Desempilhou até a pilha ficar vazia. ",
+                    "stack_represetation": "",
+                    "postfix_expression": "123*+"
+                }
+            }
+        ],
+        "postfix_expression_final": "123*+"
+    }
+}
