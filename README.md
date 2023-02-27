@@ -1,4 +1,6 @@
-# Infix_to_Postfix_Conversion
+# Coversão de Expressão Infixada para Pós-Fixada
+
+![image](https://user-images.githubusercontent.com/58671604/221684684-c2df71fa-d8f9-4eb1-b42c-52ec202003c9.png)
 
 ## Passo a passo resumido.
     - Leu um operando. Escreve na saída
